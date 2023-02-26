@@ -9,7 +9,7 @@ body {
 }
 .but-con {
     display: flex;
-    justify-content: flex-end
+    justify-content: center
 }
 .button {
     background-color: beige;
