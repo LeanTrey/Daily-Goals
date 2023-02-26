@@ -1,8 +1,4 @@
-@media only screen and (max-width: 900px) {
-    #dailygoals {
-      padding: 20px 0px;
-    }
-  }
+
 body {
     background-color: rgb(160, 100, 87);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
@@ -16,7 +12,6 @@ body {
     border: solid rgb(152, 135, 131) 5px;
     padding: 15px 25px;
     font-weight: 800;
-    border-radius: 12%;
     font-size: 25px;
     color: rgb(152, 135, 131);
 }
@@ -32,8 +27,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 600px;
-    border-radius: 8%;
+    margin: 20px 0px;
+
 }
 input[type=date] {
     width: 100%;
@@ -63,5 +58,4 @@ p {
 #submit {
     border: solid rgb(152, 135, 131) 2px;
     border-radius: 12%;
-
 }
