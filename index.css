@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(160, 100, 87);
+}
+.but-con {
+    display: flex;
+    justify-content: flex-end
+}
+.button {
+    background-color: beige;
+    border: solid rgb(152, 135, 131) 5px;
+    padding: 15px 25px;
+    font-weight: 800;
+    border-radius: 12%;
+    font-size: 25px;
+    color: rgb(152, 135, 131);
+}
+.button:hover {
+    color: black;
+    border: solid black 5px;
+    cursor:pointer;
+}
