@@ -5,7 +5,7 @@ body {
 }
 .but-con {
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
 .button {
     background-color: beige;
@@ -14,6 +14,7 @@ body {
     font-weight: 800;
     font-size: 25px;
     color: rgb(152, 135, 131);
+    border-radius: 12%;
 }
 .button:hover {
     color: black;
@@ -27,8 +28,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 0px;
-
+    width: 40%;
+    margin: 20px auto;
+    padding: 10px
 }
 input[type=date] {
     width: 100%;
@@ -56,6 +58,28 @@ p {
     margin-bottom: 30px;
 }
 #submit {
-    border: solid rgb(152, 135, 131) 2px;
+    border: solid rgb(152, 135, 131) 4px;
     border-radius: 12%;
+    padding: 12px;
+    color: black;
+    font-weight: 800;
+    background-color: rgb(160, 100, 87);
+}
+@media only screen and (max-width: 600px) {
+    #daily-goals {
+        width: 80%;
+        padding: 20px
+    }
+    input[type=date] {
+        width: 92%;
+        margin: 10px 2px;
+    }
+    input[type=text] {
+        width: 92%;
+        margin: 10px 2px;
+    }
+    input[type=checkbox] {
+        width: 92%;
+        margin: 10px 2px;
+    }
 }
