@@ -1,5 +1,11 @@
+@media only screen and (max-width: 900px) {
+    #dailygoals {
+      padding: 20px 0px;
+    }
+  }
 body {
     background-color: rgb(160, 100, 87);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
 }
 .but-con {
     display: flex;
@@ -18,4 +24,44 @@ body {
     color: black;
     border: solid black 5px;
     cursor:pointer;
+}
+#daily-goals {
+    background-color: beige;
+    display: flex;
+    border: solid rgb(152, 135, 131) 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 600px;
+    border-radius: 8%;
+}
+input[type=date] {
+    width: 100%;
+    margin: 10px 0px;
+}
+input[type=text] {
+    width: 100%;
+    margin: 10px 0px;
+}
+input[type=checkbox] {
+    width: 100%;
+    margin: 10px 0px;
+}
+label {
+    font-weight: 700;
+}
+p {
+    font-weight: 700;
+}
+#but-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    margin-bottom: 30px;
+}
+#submit {
+    border: solid rgb(152, 135, 131) 2px;
+    border-radius: 12%;
+
 }
