@@ -13,7 +13,8 @@ function addGoalToLibrary() {
   let goal = document.querySelector('#goal').value
   let complete = document.querySelector('#completed')
   let newGoal = new Goal(date, goal, complete)
-  console.log(newGoal)
+  myGoalLibrary.push(newGoal)
+  console.log(myGoalLibrary)
 }
 
 let newGoalBtn = document.querySelector('.button')
@@ -22,7 +23,7 @@ newGoalBtn.addEventListener('click', function(){
   newGoalForm.style.display = 'block'
 })
 
-document.querySelector('#daily-goals').addEventListener('submit', function(){
+document.querySelector('#daily-goals').addEventListener('submit', function(event){
   event.preventDefault()
   addGoalToLibrary()
 })
