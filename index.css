@@ -67,10 +67,51 @@ p {
     background-color: rgb(160, 100, 87);
     font-size: 10px;
 }
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: beige;
+    border: solid rgb(152, 135, 131) 5px;
+    border-radius: 5%;
+    margin-bottom: 0 auto;
+    padding: 10px;
+}
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#library {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.remove-btn {
+    border: solid rgb(152, 135, 131) 4px;
+    border-radius: 12%;
+    padding: 5px;
+    background-color: rgb(160, 100, 87);
+    color: black;
+}
 #submit:hover {
     border: solid black 4px;
     font-size: 12px;
 }
+.toggle-complete-btn {
+    border: solid rgb(152, 135, 131) 4px;
+    border-radius: 12%;
+    padding: 5px;
+    background-color: green;
+    color: black;
+    margin-top: 15px;
+    background-color: rgb(160, 100, 87);
+}
+
 @media only screen and (max-width: 600px) {
     #daily-goals {
         width: 80%;
@@ -90,5 +131,10 @@ p {
     }
     .button {
         font-size: 12px;
+    }
+    #library {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
     }
 }
