@@ -29,16 +29,10 @@ function render(){
       </div>
       <div class="card-body">
         <p>${goalItem.goal}</p>
-        <p class="status">${goalItem.complete ? 'Completed' : 'Not Completed'}</p>
-        <button class="remove-btn" onclick="removeGoal(${i})">Remove</button>
+        <p class="status">${goalItem.complete ? '<span style="color: green;">Completed</span>' : '<span style="color: red;">Incomplete</span>'}</p>        <button class="remove-btn" onclick="removeGoal(${i})">Remove</button>
         <button class="toggle-complete-btn" onclick="toggleComplete(${i})">Toggle Complete</button>
       </div>
     </div>`
-    if (goalItem.complete) {
-      goalEl.querySelector('.status').style.color = 'green';
-    } else {
-      goalEl.querySelector('.status').style.color = 'red';
-    }
     libraryGoalEl.appendChild(goalEl)
   }
 }
@@ -51,7 +45,7 @@ function addGoalToLibrary() {
   // do stuff here
   let date = document.querySelector('#day').value
   let goal = document.querySelector('#goal').value
-  let complete = document.querySelector('#completed')
+  let complete = document.querySelector('#completed').checked
   let newGoal = new Goal(date, goal, complete)
   myGoalLibrary.push(newGoal)
   render()
@@ -68,4 +62,3 @@ document.querySelector('#daily-goals').addEventListener('submit', function(event
   event.preventDefault()
   addGoalToLibrary()
 })
-
