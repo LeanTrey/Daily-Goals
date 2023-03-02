@@ -14,6 +14,7 @@ Goal.prototype.toggleComplete = function() {
 function toggleComplete(index) {
   myGoalLibrary[index].toggleComplete()
   render()
+  saveToLocalStorage()
 }
 
 function render(){
@@ -36,9 +37,11 @@ function render(){
     libraryGoalEl.appendChild(goalEl)
   }
 }
+
 function removeGoal(index) {
   myGoalLibrary.splice(index, 1)
   render()
+  saveToLocalStorage()
 }
 
 function addGoalToLibrary() {
@@ -49,7 +52,20 @@ function addGoalToLibrary() {
   let newGoal = new Goal(date, goal, complete)
   myGoalLibrary.push(newGoal)
   render()
-    document.querySelector('#daily-goals').style.display = 'none'
+  saveToLocalStorage()
+  document.querySelector('#daily-goals').style.display = 'none'
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem('myGoalLibrary', JSON.stringify(myGoalLibrary))
+}
+
+function loadFromLocalStorage() {
+  let storedLibrary = localStorage.getItem('myGoalLibrary')
+  if (storedLibrary) {
+    myGoalLibrary = JSON.parse(storedLibrary).map((goal) => new Goal(goal.date, goal.goal, goal.complete))
+    render()
+  }
 }
 
 let newGoalBtn = document.querySelector('.button')
@@ -62,3 +78,5 @@ document.querySelector('#daily-goals').addEventListener('submit', function(event
   event.preventDefault()
   addGoalToLibrary()
 })
+
+loadFromLocalStorage()
