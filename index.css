@@ -111,6 +111,12 @@ p {
     margin-top: 15px;
     background-color: rgb(160, 100, 87);
 }
+.toggle-complete-btn:hover {
+    border: solid black 4px;
+}
+.remove-btn:hover {
+    border: solid black 4px;
+}
 @media only screen and (max-width: 600px) {
     #daily-goals {
         width: 80%;

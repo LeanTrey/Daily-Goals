@@ -30,7 +30,8 @@ function render(){
       </div>
       <div class="card-body">
         <p>${goalItem.goal}</p>
-        <p class="status">${goalItem.complete ? '<span style="color: green;">Completed</span>' : '<span style="color: red;">Incomplete</span>'}</p>        <button class="remove-btn" onclick="removeGoal(${i})">Remove</button>
+        <p class="status">${goalItem.complete ? '<span style="color: green;">Completed</span>' : '<span style="color: red;">Incomplete</span>'}</p>        
+        <button class="remove-btn" onclick="removeGoal(${i})">Remove</button>
         <button class="toggle-complete-btn" onclick="toggleComplete(${i})">Toggle Complete</button>
       </div>
     </div>`
